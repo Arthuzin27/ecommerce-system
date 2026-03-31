@@ -17,7 +17,7 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(name = "nome_completo", nullable = false, length = 100)
     private String nomeCompleto;
@@ -50,5 +50,4 @@ public class Cliente {
     public void preUpdate() {
         this.dataAtualizacao = LocalDateTime.now();
     }
-
 }

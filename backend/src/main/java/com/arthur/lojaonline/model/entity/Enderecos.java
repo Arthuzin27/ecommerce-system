@@ -66,5 +66,4 @@ public class Enderecos {
     public void preUpdate() {
         this.dataAtualizacao = LocalDateTime.now();
     }
-
 }

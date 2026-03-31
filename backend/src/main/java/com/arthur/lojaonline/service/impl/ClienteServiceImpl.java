@@ -37,7 +37,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public ClienteResponse buscarPorId(Integer id) {
+    public ClienteResponse buscarPorId(Long id) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
         return converterParaResponse(cliente);
@@ -50,7 +50,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public ClienteResponse atualizarCliente(Integer id, ClienteRequest request) {
+    public ClienteResponse atualizarCliente(Long id, ClienteRequest request) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
 
@@ -76,7 +76,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public void deletarCliente(Integer id) {
+    public void deletarCliente(Long id) {
         if (!clienteRepository.existsById(id)) {
             throw new RuntimeException("Cliente não encontrado");
         }

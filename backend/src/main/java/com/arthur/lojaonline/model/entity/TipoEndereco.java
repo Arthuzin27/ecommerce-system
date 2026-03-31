@@ -18,5 +18,4 @@ public class TipoEndereco {
 
     @Column(name = "nome", nullable = false, unique = true, length = 20)
     private String nome;
-
 }

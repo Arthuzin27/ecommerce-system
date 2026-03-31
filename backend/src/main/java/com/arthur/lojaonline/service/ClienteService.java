@@ -9,11 +9,11 @@ public interface ClienteService {
 
     ClienteResponse cadastrarCliente(ClienteRequest request);
 
-    ClienteResponse buscarPorId(Integer id);
+    ClienteResponse buscarPorId(Long id);
 
     List<ClienteResponse> listarTodos();
 
-    ClienteResponse atualizarCliente(Integer id, ClienteRequest request);
+    ClienteResponse atualizarCliente(Long id, ClienteRequest request);
 
-    void deletarCliente(Integer id);
+    void deletarCliente(Long id);
 }

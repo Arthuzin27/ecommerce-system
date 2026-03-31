@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ClienteResponse {
 
-    private Integer id;
+    private Long id;
     private String nomeCompleto;
     private String cpf;
     private LocalDate nascimento;
@@ -21,7 +21,7 @@ public class ClienteResponse {
     private LocalDateTime dataCadastro;
     private LocalDateTime dataAtualizacao;
 
-    public ClienteResponse(Integer id, String nomeCompleto, String cpf, String email, String telefone) {
+    public ClienteResponse(Long id, String nomeCompleto, String cpf, String email, String telefone) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.cpf = cpf;

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("/cliente")
 public class ClienteController {
 
     private final ClienteService clienteService;
@@ -26,7 +26,7 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ClienteResponse> buscarPorId(@PathVariable Integer id) {
+    public ResponseEntity<ClienteResponse> buscarPorId(@PathVariable Long id) {
         ClienteResponse response = clienteService.buscarPorId(id);
         return ResponseEntity.ok(response);
     }
@@ -38,13 +38,13 @@ public class ClienteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ClienteResponse> atualizarCliente(@PathVariable Integer id, @RequestBody ClienteRequest request) {
+    public ResponseEntity<ClienteResponse> atualizarCliente(@PathVariable Long id, @RequestBody ClienteRequest request) {
         ClienteResponse response = clienteService.atualizarCliente(id, request);
         return ResponseEntity.ok(response);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletarCliente(@PathVariable Integer id) {
+    public ResponseEntity<Void> deletarCliente(@PathVariable Long id) {
         clienteService.deletarCliente(id);
         return ResponseEntity.noContent().build();
     }
