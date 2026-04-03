@@ -3,6 +3,7 @@ package com.arthur.lojaonline.controller;
 import com.arthur.lojaonline.dto.request.CategoriaRequest;
 import com.arthur.lojaonline.dto.response.CategoriaResponse;
 import com.arthur.lojaonline.service.CategoriaService;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

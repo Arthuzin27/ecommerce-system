@@ -2,6 +2,8 @@ package com.arthur.lojaonline.controller;
 
 import com.arthur.lojaonline.dto.response.TipoEnderecoResponse;
 import com.arthur.lojaonline.service.TipoEnderecoService;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,13 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tipos-enderecos")
+@RequiredArgsConstructor
 public class TipoEnderecoController {
 
     private final TipoEnderecoService tipoEnderecoService;
-
-    public TipoEnderecoController(TipoEnderecoService tipoEnderecoService) {
-        this.tipoEnderecoService = tipoEnderecoService;
-    }
 
     @GetMapping
     public ResponseEntity<List<TipoEnderecoResponse>> listarTodos() {
